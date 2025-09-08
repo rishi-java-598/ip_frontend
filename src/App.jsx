@@ -162,17 +162,92 @@
 
 
 
+// import React from "react";
+// import "./App.css";
+
+// // Manager Components
+// import ManagerDashboard from "./components/manager/ManagerDashboard";
+// import ApproveRegistration from "./components/manager/ApproveRegistration";
+// import UserManagement from "./components/manager/UserManagement";
+// import AttendanceMarking from "./components/manager/AttendanceMarking";
+// import AttendanceSummary from "./components/manager/AttendanceSummary";
+// import UserAttendanceView from "./components/manager/UserAttendanceView";
+// import AllUsersList from "./components/manager/AllUsersList";
+
+// // Optional shared components
+// import Navbar from "./components/shared/Navbar";
+// import Sidebar from "./components/shared/Sidebar";
+
+// export default function App() {
+//   const sidebarLinks = [
+//     "Dashboard",
+//     "Approve Registration",
+//     "User Management",
+//     "Attendance Marking",
+//     "Attendance Summary",
+//     "User Attendance View",
+//     "All Users"
+//   ];
+
+//   return (
+//     <div className="app-container">
+//       <Navbar role="manager" />
+//       <div className="main-layout">
+//         <Sidebar links={sidebarLinks} />
+//         <div className="content">
+//           <h1>🛠 Manager Portal Preview</h1>
+
+//           <section>
+//             <ManagerDashboard />
+//           </section>
+
+//           <section>
+//             <ApproveRegistration />
+//           </section>
+
+//           <section>
+//             <UserManagement />
+//           </section>
+
+//           <section>
+//             <AttendanceMarking />
+//           </section>
+
+//           <section>
+//             <AttendanceSummary />
+//           </section>
+
+//           <section>
+//             <UserAttendanceView />
+//           </section>
+
+//           <section>
+//             <AllUsersList />
+//           </section>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
 import React from "react";
 import "./App.css";
 
-// Manager Components
-import ManagerDashboard from "./components/manager/ManagerDashboard";
-import ApproveRegistration from "./components/manager/ApproveRegistration";
-import UserManagement from "./components/manager/UserManagement";
-import AttendanceMarking from "./components/manager/AttendanceMarking";
-import AttendanceSummary from "./components/manager/AttendanceSummary";
-import UserAttendanceView from "./components/manager/UserAttendanceView";
-import AllUsersList from "./components/manager/AllUsersList";
+// Admin Components
+import AdminDashboard from "./components/admin/AdminDashboard";
+import AdminUserManagement from "./components/admin/AdminUserManagement";
+import AttendanceDataView from "./components/admin/AttendanceDataView";
+import MembershipControl from "./components/admin/MembershipControl";
 
 // Optional shared components
 import Navbar from "./components/shared/Navbar";
@@ -181,48 +256,33 @@ import Sidebar from "./components/shared/Sidebar";
 export default function App() {
   const sidebarLinks = [
     "Dashboard",
-    "Approve Registration",
     "User Management",
-    "Attendance Marking",
-    "Attendance Summary",
-    "User Attendance View",
-    "All Users"
+    "Attendance Data",
+    "Membership Control"
   ];
 
   return (
     <div className="app-container">
-      <Navbar role="manager" />
+      <Navbar role="admin" />
       <div className="main-layout">
         <Sidebar links={sidebarLinks} />
         <div className="content">
-          <h1>🛠 Manager Portal Preview</h1>
+          <h1>🛡 Admin Portal Preview</h1>
 
           <section>
-            <ManagerDashboard />
+            <AdminDashboard />
           </section>
 
           <section>
-            <ApproveRegistration />
+            <AdminUserManagement />
           </section>
 
           <section>
-            <UserManagement />
+            <AttendanceDataView />
           </section>
 
           <section>
-            <AttendanceMarking />
-          </section>
-
-          <section>
-            <AttendanceSummary />
-          </section>
-
-          <section>
-            <UserAttendanceView />
-          </section>
-
-          <section>
-            <AllUsersList />
+            <MembershipControl />
           </section>
         </div>
       </div>
