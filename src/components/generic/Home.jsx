@@ -19,6 +19,7 @@ import Footer from "./Footer";
 export default function Home() {
   return (
     <>
+    <div id="inroot">
       <Header />
       <Hero />
       
@@ -26,6 +27,7 @@ export default function Home() {
       <Stats />
       <WhyChoose />
       <Membership />
+      </div>
       <Footer />
     </>
   );
