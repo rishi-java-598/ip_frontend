@@ -1,0 +1,282 @@
+/* @import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+.container {
+  background: #fff;
+  color: #333;
+  font-family: 'Gilroy-Regular', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.registerContainer {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.35);
+  max-width: 420px;
+  width: 100%;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Gilroy-Bold', sans-serif;
+}
+
+.subtitle {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.nameFields {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+input, select {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fafafa;
+  outline: none;
+  flex: 1;
+}
+
+input:focus, select:focus {
+  border-color: #007bff;
+}
+
+button {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background: #111;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #333;
+}
+
+.signinText {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.signinText a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signinText a:hover {
+  text-decoration: underline;
+}
+
+.dateFields {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 480px) {
+  .nameFields, .dateFields {
+    flex-direction: column;
+  }
+} */
+
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gilroy-Regular', sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+#main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgb(119, 102, 80); */
+    display: flex;
+}
+
+#leftSide{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+
+
+/* Container */
+.registerContainer {
+  width: 100%;
+  padding: 20px;
+}
+
+.registerBox {
+  background: #fffffff1;
+  padding: 30px 25px;
+  border-radius: 22px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.393);
+}
+
+/* Title with icon */
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.title .icon {
+  width: 14px;
+  height: 14px;
+  background: #010101;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+/* Form fields */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nameFields {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.nameFields input {
+  flex: 1;              
+  min-width: 0;      
+}
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: #000000;
+}
+
+/* Submit button */
+button {
+  background: #000000;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #353535d7;
+}
+
+/* Signin text */
+.signinText {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 15px;
+  color: #555;
+}
+
+.signinText a {
+  color: #3aa0ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signinText a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  #leftSide {
+    width: 100%;
+    border-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .nameFields {
+    flex-direction: column;
+  }
+}
+
+
+/* From Uiverse.io by csemszepp */ 
+.container {
+  width: 100%;
+  height: 100%;
+  --s: 200px; /* control the size */
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+}
