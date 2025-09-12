@@ -5,7 +5,7 @@ export default function Hero() {
     <div className={styles.mainpage} id={styles.mainpage}>
       <div className={styles.leftText}>
         <span>
-          <h2 >
+          <h2>
             BUILD STRENGTH. BOOST CONFIDENCE. TRANSFORM YOUR LIFE.
           </h2>
         </span>

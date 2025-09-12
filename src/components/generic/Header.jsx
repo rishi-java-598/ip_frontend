@@ -14,8 +14,8 @@ export default function Header() {
 
      
       <div className={styles.rnc}>
-        <button>
-          <Link to="/login">LOG IN</Link>
+        <button className={styles.signupBtn}>
+          <Link id={styles.moveLink} to="/login">LOG IN</Link>
         </button>
       </div>
     </nav>

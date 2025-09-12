@@ -25,7 +25,7 @@ export default function Home() {
       {/* <div style={{ width: "90%", height: "80vh", margin: "5vh auto", borderRadius: "50px", backgroundImage: "url(/images/bigimg1.png)", backgroundPosition: "center", backgroundSize: "cover" }}></div> */}
       <Stats />
       <WhyChoose />
-      {/* <Membership /> */}
+      <Membership />
       <Footer />
     </>
   );
