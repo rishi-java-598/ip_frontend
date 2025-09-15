@@ -89,7 +89,7 @@
 .loginBox label {
   display: block;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   font-size: 14px;
 }
 
@@ -98,8 +98,8 @@
   align-items: center;
   border: 1px solid #ddd;
   border-radius: 8px;
-  margin-bottom: 20px;
-  padding: 10px;
+  margin-bottom: 0px;
+  padding:2px 6px;
   background: #fafafa;
 }
 
@@ -146,6 +146,21 @@
 
 .btn:hover {
   background: #333;
+}
+.disabledBtn {
+  width: 100%;
+  padding: 12px;
+  background: #4a4a4a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: not-allowed;
+  transition: 0.3s;
+}
+
+.disabledBtn:hover {
+  background: #3e3e3e;
 }
 
 .signupText {
@@ -196,7 +211,7 @@
   }
 
   .inputGroup {
-    padding: 8px;
+    /* padding: 8px; */
   }
 
   .icon {

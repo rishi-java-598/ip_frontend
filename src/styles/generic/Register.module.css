@@ -97,7 +97,7 @@ input:focus {
   border-color: #000000;
 }
 
-button {
+.rgstrBTN {
   background: #000000;
   border: none;
   padding: 12px;
@@ -109,10 +109,23 @@ button {
   transition: background 0.3s;
 }
 
-button:hover {
+.rgstrBTN:hover {
   background: #353535d7;
 }
-
+.disabled{
+  background: rgb(86, 86, 86);
+  cursor: not-allowed;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.disabled:hover{
+  background: rgb(58, 58, 58);
+}
 .signinText {
   text-align: center;
   margin-top: 14px;
