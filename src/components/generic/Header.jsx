@@ -18,7 +18,9 @@ export default function Header() {
       <div className={styles.rnc}>
          {user?
         <button className={styles.signupBtn}  id={styles.moveLink}  onClick={logout}>Log out</button> 
-        :<Link className={styles.signupBtn} id={styles.moveLink} to="/login">LOG IN</Link>
+        :<Link className={styles.signupBtn} 
+        // id={styles.moveLink}
+         to="/login">LOG IN</Link>
          }
      
         </div>
