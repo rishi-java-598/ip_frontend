@@ -6,10 +6,14 @@ import "./App.css";
 import Home from "./components/generic/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import ProtectedRoute from "./components/Protectedroute";
+import Dashboard from "./components/pages/Dashboard";
+import { AuthProvider } from "./components/context/Authcontext";
 
 
 export default function App() {
   return (
+    <AuthProvider>
     <Router>
       <Routes>
         {/* Public routes */}
@@ -20,7 +24,16 @@ export default function App() {
         {/* Protected dashboard route */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} /> 
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
       </Routes>
     </Router>
+    </AuthProvider>
   );
 }

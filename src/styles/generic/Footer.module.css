@@ -1,6 +1,6 @@
 .footer {
   margin-top: 40px;
-  width: 100vw;
+  /* width: 100vw; */
   background-color: #0f0f1f;
   color: white;
   padding: 2rem;
@@ -20,7 +20,7 @@
   text-decoration: none;
   color: white;
   transition: all 0.3s ease 0s;
-  padding: 2px 6px;
+  padding: 8px 10px;
   border-radius: 10px;
 }
 .flink:hover {

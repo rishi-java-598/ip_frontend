@@ -13,6 +13,24 @@
   color: #333;
 }
 
+.AlreadyLoggedIn {
+   text-align: center; 
+   
+     background: #fff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.355);
+  width: 90%;
+  min-height: 46vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display:flex;
+   flex-direction:column;
+  max-width: 460px;
+  margin: 15px;
+}
+
 .container {
   position: relative;
   width: 100%;

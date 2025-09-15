@@ -1,7 +1,9 @@
 import styles from "../../styles/generic/generic.module.css";
 import { Link } from "react-router-dom";
 import pic from "../../assets/Logo.png";
+import { useAuth } from "../context/Authcontext";
 export default function Header() {
+  const {user,logout} = useAuth();
   return (
     <nav className={styles.nav}>
         <div className={styles.lnc}>
@@ -14,10 +16,12 @@ export default function Header() {
 
      
       <div className={styles.rnc}>
-        <button className={styles.signupBtn}>
-          <Link id={styles.moveLink} to="/login">LOG IN</Link>
-        </button>
-      </div>
+         {user?
+        <button className={styles.signupBtn}  id={styles.moveLink}  onClick={logout}>Log out</button> 
+        :<Link className={styles.signupBtn} id={styles.moveLink} to="/login">LOG IN</Link>
+         }
+     
+        </div>
     </nav>
   );
 }
