@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/admin/AdminDashboard.module.css";
+import AdminUserManagement from "./AdminUserManagement.jsx";
 
 export default function AdminDashboard() {
   return (
@@ -11,6 +12,7 @@ export default function AdminDashboard() {
         <div className={styles.card}>Active Memberships: 120</div>
         <div className={styles.card}>Pending Approvals: 5</div>
       </div>
+      <AdminUserManagement/>
     </div>
   );
 }

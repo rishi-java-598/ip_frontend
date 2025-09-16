@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/manager/ManagerDashboard.module.css";
+import ManagerUserManagement from "./ManagerUM";
 
 export default function ManagerDashboard() {
   return (
@@ -11,6 +12,7 @@ export default function ManagerDashboard() {
         <div className={styles.card}>Attendance Marked Today: ✅</div>
         <div className={styles.card}>Total Members: 120</div>
       </div>
+      <ManagerUserManagement/>
     </div>
   );
 }
