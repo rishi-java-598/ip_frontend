@@ -2,6 +2,7 @@ import styles from "../../styles/generic/generic.module.css";
 import { Link } from "react-router-dom";
 import pic from "../../assets/Logo.png";
 import { useAuth } from "../context/Authcontext";
+import HamMenu from "./HamMenu";
 export default function Header() {
   const {user,logout} = useAuth();
   return (
@@ -22,6 +23,8 @@ export default function Header() {
         // id={styles.moveLink}
          to="/login">LOG IN</Link>
          }
+        <HamMenu/>
+
      
         </div>
     </nav>

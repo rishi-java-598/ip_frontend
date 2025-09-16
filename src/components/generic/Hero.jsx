@@ -1,5 +1,5 @@
 import styles from "../../styles/generic/generic.module.css";
-
+import { Link } from "react-router-dom";
 export default function Hero() {
   return (<>
     <div className={styles.mainpage} id={styles.mainpage}>
@@ -19,7 +19,16 @@ export default function Hero() {
         </div>
       </div>
     </div>
-    <div className={styles.bigImage} id={styles.bigImage}></div>
+    <div className={styles.bigImage} id={styles.bigImage}>
+
+      {/* <Link className={styles.regBTN} >JOIN NOW</Link> */}
+      {/* <Link to="/register"  className={`${styles["learn-more"]} ${styles.regBTN}`}>
+  <span className={styles["circle"]} aria-hidden="true">
+  <span className={styles["icon arrow"]}></span>
+  </span>
+  <span className={styles["button-text"]}>Learn More</span>
+</Link> */}
+    </div>
 </>
   );
 }

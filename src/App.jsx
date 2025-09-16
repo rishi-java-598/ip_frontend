@@ -9,6 +9,7 @@ import Register from "./components/Register";
 import ProtectedRoute from "./components/Protectedroute";
 import Dashboard from "./components/pages/Dashboard";
 import { AuthProvider } from "./components/context/Authcontext";
+import Navbar from "./components/generic/HamMenu";
 
 
 export default function App() {
@@ -17,7 +18,7 @@ export default function App() {
     <Router>
       <Routes>
         {/* Public routes */}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<><Home /></>} />
         {/* <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         
