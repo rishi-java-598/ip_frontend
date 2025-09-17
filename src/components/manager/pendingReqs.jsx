@@ -254,7 +254,8 @@ const PendingUserApproval = () => {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
-
+      console.log(res);
+      
       setUsers(res.data.users || []);
       setTotalPages(res.data.totalPages || 1);
     } catch (err) {
