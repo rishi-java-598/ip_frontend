@@ -1946,7 +1946,7 @@ const ManagerUserManagement = () => {
             >
               <div className={styles.cardHeader}>
                 <h3>{user.name}</h3>
-                <span className={styles.role}>
+                <span style={{backgroundColor:user.membership?.status==="active"?"#50f39f35":"#cd212139"}} className={styles.role}>
                   {user.membership?.status || "inactive"}
                 </span>
               </div>
@@ -2298,7 +2298,7 @@ const ManagerUserManagement = () => {
                   {selectedUser.membership?.validity?.startDate || "-"} to{" "}
                   {selectedUser.membership?.validity?.endDate || "-"}
                 </p>
-                <button onClick={() => setSelectedUser(null)}>Close</button>
+                <button className={styles.cancelButton} onClick={() => setSelectedUser(null)}>Close</button>
               </>
             )}
 
