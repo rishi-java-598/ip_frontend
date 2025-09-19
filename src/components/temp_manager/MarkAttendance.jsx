@@ -175,6 +175,7 @@ import { api } from './api';
 //   return `${year}-${month}-${day}`;
 // };
 // utility: yyyy-mm-dd in LOCAL timezone
+
 const toISODate = (d = new Date()) => {
   const year = d.getFullYear();
   const month = String(d.getMonth() + 1).padStart(2, '0');
@@ -319,7 +320,7 @@ const MarkAttendance = () => {
                   <div className={styles.slot}>Slot: {m.slot}</div>
                 </div>
                 <div className={styles.actions}>
-                  <button onClick={() => handleUpdateSlot(m)}>Edit Slot</button>
+                  <button className={styles.editBTN} onClick={() => handleUpdateSlot(m)}>Edit Slot</button>
                   <button className={styles.remove} onClick={() => handleRemove(m)}>
                     Remove
                   </button>

@@ -227,3 +227,12 @@
   margin-top: 12px;
   align-items: center;
 }
+
+.editBTN{
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #304ee5;
+  color: white;
+  margin-right: 6px;
+}
