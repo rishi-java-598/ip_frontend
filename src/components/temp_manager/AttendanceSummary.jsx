@@ -9,13 +9,25 @@ const AttendanceSummary = () => {
   const [error, setError] = useState(null);
 
   // calendar range: from 3 months back up to tomorrow
-  const start = useMemo(()=> subMonths(new Date(), 3), []);
-  const end = useMemo(()=> addDays(new Date(), 1), []);
-  const days = useMemo(()=> {
-    const arr = [];
-    for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) arr.push(new Date(d));
-    return arr;
-  }, [start, end]);
+  // const start = useMemo(()=> subMonths(new Date(), 3), []);
+  // const end = useMemo(()=> addDays(new Date(), 1), []);
+  // const days = useMemo(()=> {
+  //   const arr = [];
+  //   for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) arr.push(new Date(d));
+  //   return arr;
+  // }, [start, end]);
+
+  // calendar range: from 3 months back up to today
+const start = useMemo(() => subMonths(new Date(), 3), []);
+const end = useMemo(() => new Date(), []); // stop at today
+const days = useMemo(() => {
+  const arr = [];
+  for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+    arr.push(new Date(d));
+  }
+  return arr;
+}, [start, end]);
+
 
   const handleClickDate = async (dt) => {
     const iso = dt.toISOString().slice(0,10);

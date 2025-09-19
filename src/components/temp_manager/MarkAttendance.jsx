@@ -166,10 +166,26 @@ import styles from './style.module.css';
 import { api } from './api';
 
 // utility: yyyy-mm-dd
-const toISODate = (d = new Date()) => d.toISOString().slice(0, 10);
+// const toISODate = (d = new Date()) => d.toISOString().slice(0, 10);
+// utility: yyyy-mm-dd in LOCAL timezone
+// const toISODate = (d = new Date()) => {
+//   const year = d.getFullYear();
+//   const month = String(d.getMonth() + 1).padStart(2, '0');
+//   const day = String(d.getDate()).padStart(2, '0');
+//   return `${year}-${month}-${day}`;
+// };
+// utility: yyyy-mm-dd in LOCAL timezone
+const toISODate = (d = new Date()) => {
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
 
 const MarkAttendance = () => {
   const today = toISODate(new Date());
+  console.log(today);
+  
   const [allUsers, setAllUsers] = useState([]);
   const [markedToday, setMarkedToday] = useState([]); // already marked today
   const [query, setQuery] = useState('');
