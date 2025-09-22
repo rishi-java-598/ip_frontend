@@ -17,9 +17,21 @@ const ManagerDashboard2 = () => {
           <button className={active==='summary'?styles.active:''} onClick={()=>setActive('summary')}>Attendance Summary By Date</button>
           <button className={active==='previous'?styles.active:''} onClick={()=>setActive('previous')}>Previous Attendance</button>
         </nav>
+        
       </aside>
 
+
+
+
       <main className={styles.main}>
+
+        {/* <nav className={styles.uppernav}>
+        <button className={active==='mark'?styles.active:''} onClick={()=>setActive('mark')} title="Mark Today's Attendance">Mark Attendance</button>
+          <button className={active==='users'?styles.active:''} onClick={()=>setActive('users')} title='Get Users Attendance'>Get Attendance</button>
+          <button className={active==='summary'?styles.active:''} onClick={()=>setActive('summary')} title='Attendance Summary By Date'>Attendance Summary</button>
+          <button className={active==='previous'?styles.active:''} onClick={()=>setActive('previous')} title='Previous Attendance'>Previous Attendance</button>
+      </nav> */}
+      
         {active === 'mark' && <MarkAttendance />}
         {active === 'users' && <UserList />}
         {active === 'summary' && <AttendanceSummary />}

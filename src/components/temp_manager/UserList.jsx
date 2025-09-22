@@ -77,7 +77,7 @@ const UserList = () => {
 
   return (
     <div className={styles.wrap}>
-      <h1>All Members</h1>
+      <h1 style={{marginBottom:"10px"}}> All Members</h1>
       <div className={styles.controls}>
         <input
           placeholder="Search"
@@ -100,15 +100,24 @@ const UserList = () => {
             </div>
             <div>
               {/* ✅ open modal on click */}
-              <a
-                href="#"
+              <button
+                className={styles.viewUABTN}                
+                onClick={(e) => {
+                  e.preventDefault();
+                  setSelectedUser(u._id);
+                }}
+              >
+                view
+              </button>
+              {/* <Link
+                to="#"
                 onClick={(e) => {
                   e.preventDefault();
                   setSelectedUser(u._id);
                 }}
               >
                 View Attendance
-              </a>
+              </Link> */}
             </div>
           </div>
         ))}

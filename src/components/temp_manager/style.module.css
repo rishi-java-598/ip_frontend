@@ -95,7 +95,7 @@
 .resultCard {
   display: flex;
   justify-content: space-between;
-  padding: 8px;
+  padding: 8px 0px;
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -116,7 +116,7 @@
 }
 
 .empty {
-  padding: 20px;
+  padding: 20px 0px;
   color: #888;
 }
 
@@ -189,6 +189,8 @@
   color: #c53030;
 }
 
+
+
 .slotGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -235,4 +237,17 @@
   background: #304ee5;
   color: white;
   margin-right: 6px;
+}
+
+#searchMem{
+  width: 100%;
+}
+#smHead{
+  margin-bottom: 10px;
+}
+
+.viewUABTN{
+  padding: 10px;
+  border-radius: 10px;
+  border: blue 1px dashed;
 }

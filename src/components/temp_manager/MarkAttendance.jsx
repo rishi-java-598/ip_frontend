@@ -339,8 +339,9 @@ const MarkAttendance = () => {
         </section>
 
         <aside className={styles.right}>
-          <h3>Search Members</h3>
+          <h3 id={styles.smHead}>Search Members</h3>
           <input
+          id={styles.searchMem}
             placeholder="Search by name or email"
             value={query}
             onChange={e => setQuery(e.target.value)}
