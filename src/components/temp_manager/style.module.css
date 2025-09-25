@@ -251,3 +251,22 @@
   border-radius: 10px;
   border: blue 1px dashed;
 }
+
+.uppernav{
+  display: none;
+}
+
+@media (max-width:1200px) {
+  .sidebar{
+    display: none;
+  }
+  .uppernav{
+    display: block;
+  }
+}
+@media (max-width:1000px) {
+  .cols{
+    display: flex;
+    flex-direction: column;
+  }
+}

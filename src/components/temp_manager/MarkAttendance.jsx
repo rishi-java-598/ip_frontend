@@ -310,7 +310,7 @@ const MarkAttendance = () => {
       <h1>Mark Today's Attendance</h1>
       <div className={styles.cols}>
         <section className={styles.left}>
-          <h3>Marked Members ({markedToday.length})</h3>
+          <h3 style={{marginBottom:"10px"}}>Marked Members ({markedToday.length})</h3>
           <div className={styles.cards}>
             {markedToday.map((m, idx) => (
               <div key={idx} className={styles.card}>
