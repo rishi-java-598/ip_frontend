@@ -106,7 +106,8 @@ const UserAttendanceDetail = ({ userId, onClose }) => {
       if (endDate) params.append("endDate", endDate);
 
       const res = await api.getMemberAttendance(userId, `?${params.toString()}`);
-
+      console.log(res);
+      
       setRecords(res.records || []);
       setTotalPages(res.totalPages || 1);
       setTotalRecords(res.totalRecords || 0);
@@ -172,8 +173,8 @@ const UserAttendanceDetail = ({ userId, onClose }) => {
           {!loading && records.map((r, idx) => (
             <div key={idx} className={styles.recordCard}>
               <div><strong>{new Date(r.date).toLocaleDateString()}</strong></div>
-              <div>Slot: {r.slot}</div>
-              <div>Status: {r.status || "—"}</div>
+              <div>{r.slot}</div>
+              {/* <div>Status: {r.status || "—"}</div> */}
             </div>
           ))}
         </div>

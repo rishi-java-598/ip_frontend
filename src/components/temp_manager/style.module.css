@@ -169,6 +169,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  justify-content: center;
+  align-items: center;
   max-height: 40vh;
   overflow: auto;
   margin: 12px 0;
@@ -255,6 +257,46 @@
 .uppernav{
   display: none;
 }
+
+
+/* for userlist pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-weight: 500;
+}
+
+.slotSearch{
+  padding: 6px;
+}
+
+
+
+
+
+
+
+
 
 @media (max-width:1200px) {
   .sidebar{
