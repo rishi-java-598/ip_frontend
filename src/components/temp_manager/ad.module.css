@@ -10,6 +10,10 @@
   justify-content: center;
   z-index: 1000;
 }
+.slotSearch{
+  padding: 6px;
+}
+
 
 .modal {
   background: #fff;

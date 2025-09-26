@@ -61,7 +61,7 @@ const PreviousAttendance = () => {
   const load = async () => {
     setLoading(true);
     try {
-      const res = await api.getPreviousAttendance(`?page=${page}&limit=20`);
+      const res = await api.getPreviousAttendance(`?page=${page}&limit=10`);
       setRecords(res.data || []);
       setTotalPages(res.totalPages || 1);
     } catch (err) {
@@ -84,25 +84,27 @@ const PreviousAttendance = () => {
             <div>
               <strong>{new Date(r.date).toISOString().slice(0, 10)}</strong>
             </div>
-            <div>Present: {(r.presentMembers || []).length}</div>
-            <div>Marked by: {r.markedBy ? r.markedBy.name : "—"}</div>
+            {/* <div>Present: {(r.presentMembers || []).length}</div> */}
+            {/* <div>Marked by: {r.markedBy ? r.markedBy.name : "—"}</div> */}
             <div>
-              <a
-                href="#"
-                className={styles.link}
+              <button
+              
+                
+                style={{padding:"8px",fontSize:"10px",backgroundColor:"rgb(0 0 0 / 8%)",textDecoration:"none",color:"black"}}
+                className={styles.viewUABTN}
                 onClick={(e) => {
                   e.preventDefault();
                   setSelectedRecord(r);
                 }}
               >
-                View
-              </a>
+                view
+              </button>
             </div>
           </div>
         ))}
       </div>
 
-      <div className={styles.pager}>
+      {/* <div className={styles.pager}>
         <button
           onClick={() => setPage((p) => Math.max(1, p - 1))}
           disabled={page <= 1}
@@ -118,7 +120,24 @@ const PreviousAttendance = () => {
         >
           Next
         </button>
-      </div>
+      </div> */} {/* pagination for marked */}
+                <div className={styles.pagination}>
+                  <button
+                    onClick={() => setPage((p) => Math.max(1, p - 1))}
+          disabled={page <= 1}
+                  >
+                    Prev
+                  </button>
+                  <span>
+                    Page {page} / {totalPages}
+                  </span>
+                  <button
+                    onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+          disabled={page >= totalPages}
+                  >
+                    Next
+                  </button>
+                </div>
 
       {selectedRecord && (
         <AttendanceDetail

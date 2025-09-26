@@ -10,9 +10,11 @@ const ManagerDashboard2 = () => {
   const [active, setActive] = useState('mark');
 
   return (
+    
     <div className={styles.container}>
+
       <aside className={styles.sidebar}>
-        <h2 className={styles.logo}>Manager</h2>
+        <h2 className={styles.logo}>Menu</h2>
         <nav>
           <button className={active==='mark'?styles.active:''} onClick={()=>setActive('mark')}>Mark Today's Attendance</button>
           <button className={active==='users'?styles.active:''} onClick={()=>setActive('users')}>Get Users Attendance</button>
@@ -26,6 +28,8 @@ const ManagerDashboard2 = () => {
 
 
       <main className={styles.main}>
+                    <h1 className={styles.mdHead}> Manager Dashboard</h1>
+
 
         {/* <nav className={styles.uppernav}>
        
