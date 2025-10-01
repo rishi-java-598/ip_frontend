@@ -386,6 +386,9 @@
 //part 3
 import React, { useEffect, useMemo, useState } from 'react';
 import styles from './style.module.css';
+import { MdDelete } from "react-icons/md";
+import { CiEdit } from "react-icons/ci";
+
 import { api } from './api';
 
 // utility: yyyy-mm-dd in LOCAL timezone
@@ -577,8 +580,14 @@ const MarkAttendance = () => {
                   <div className={styles.slot}>Slot: {m.slot}</div>
                 </div>
                 <div className={styles.actions}>
-                  <button className={styles.editBTN} onClick={() => handleUpdateSlot(m)}>Edit Slot</button>
-                  <button className={styles.remove} onClick={() => handleRemove(m)}>Remove</button>
+                  <button className={styles.editBTN} onClick={() => handleUpdateSlot(m)}>
+                    {/* Edit Slot  */}
+                  <span id={styles.editIcon}><CiEdit /></span>
+                    </button>
+                  <button className={styles.remove} onClick={() => handleRemove(m)}>
+                    {/* Remove  */}
+                    <span id={styles.removeIcon}><MdDelete /></span>
+                    </button>
                 </div>
               </div>
             ))}
@@ -607,7 +616,7 @@ const MarkAttendance = () => {
           </div>
 
           <div className={styles.saveRow}>
-            <button onClick={handleSave} disabled={saving}>
+            <button onClick={handleSave} disabled={saving} id={styles.saveBtn}>
               {saving ? 'Saving...' : 'Save New Marks'}
             </button>
           </div>
@@ -640,7 +649,7 @@ const MarkAttendance = () => {
                   </div>
                 </div>
                 <div>
-                  <button onClick={() => handleMarkPresent(u)}>Mark Present</button>
+                  <button id={styles.markBTN} onClick={() => handleMarkPresent(u)}>Mark</button>
                 </div>
               </div>
             ))}

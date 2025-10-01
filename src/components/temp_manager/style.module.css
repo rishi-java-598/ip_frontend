@@ -79,6 +79,7 @@
 
 .card {
   display: flex;
+      flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
@@ -95,6 +96,7 @@
 
 .resultCard {
   display: flex;
+      flex-wrap: wrap;
   justify-content: space-between;
   padding: 8px 0px;
   border-bottom: 1px solid #f0f0f0;
@@ -111,7 +113,11 @@
 .remove {
   padding: 6px 10px;
   border: none;
-  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+/* flex-direction: column; */
+  gap: 6px;  border-radius: 6px;
   background: #e53e3e;
   color: white;
 }
@@ -241,6 +247,11 @@
   border-radius: 6px;
   background: #304ee5;
   color: white;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  gap: 6px;
+  display: flex;
   margin-right: 6px;
 }
 
@@ -302,6 +313,92 @@
 }
 
 
+#markBTN{
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #178c4a;
+  color: white;
+}
+#markBTN::after{
+  content: " present";
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.actions{
+  display: flex
+;
+}
+
+.editBTN::before{
+  content: " Edit Slot";
+
+}
+.remove::before{
+  content: " Remove";
+}
+
+
+
+
+
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.day {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.mobileSelector {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin: 1rem 0;
+}
+#dateInput{
+  margin-left: 10px;
+}
+@media (max-width: 900px) {
+  .calendar {
+    display: none; /* hide large-screen calendar */
+  }
+  .mobileSelector {
+    display: flex; /* show mobile date input */
+  }
+
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -319,10 +416,53 @@
     flex-direction: column;
   }
 }
+
+@media (max-width:500px) {
+  .actions{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+
+  #markBTN::after{
+  content: "";
+
+}
+  .editBTN{
+    margin: 0px;
+  }
+  .saveRow{
+    justify-self: center;
+  }
+  /* .editBTN::before{
+    content: "";
+  }
+  .remove::before{
+    content: "";
+  } */
+  .editIcon,.removeIcon{
+    display: none;
+  }
+}
+
+
 @media (max-width:400px) {
   .mdHead{
   margin:10px 0px;
   justify-self:center;
 }
+.editBTN::before{
+    content: "";
+  }
+  .remove::before{
+    content: "";
+  }
 
+  .editBTN,.remove{
+    gap: 0px;
+}
 }
