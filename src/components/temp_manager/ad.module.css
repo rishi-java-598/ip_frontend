@@ -103,3 +103,40 @@
   font-size: 12px;
   color: #9ca3af;
 }
+#slotSelect{
+                border-radius: 6px;
+                padding: 6px;
+                margin-left: 10px;
+                border: 1px solid #0000002e;
+}
+
+.controls{
+  margin-bottom: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
+@media (max-width: 600px) {
+  .memberRow {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 6px;
+  }
+  .type, .slot, .uid {
+    font-size: 12px;
+  }
+  .slotSearch{
+  padding: 6px;
+  width: 100%;
+}
+  #slotSelect{
+  margin-left: 0px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.controls{
+  margin-bottom: 10px;
+  margin-right: 10px;
+  display: block;
+}
+}

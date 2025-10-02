@@ -207,6 +207,7 @@ const UserList = () => {
       
       <div className={styles.controls}>
         <input
+        id={styles.searMem}
           placeholder="Search"
           value={search}
           onChange={e => setSearch(e.target.value)}

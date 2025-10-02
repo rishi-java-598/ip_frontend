@@ -1671,9 +1671,14 @@
 // };
 
 // export default ManagerUserManagement;
+
+
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import PendingUserApproval from "./pendingReqs"
 import styles from "../../styles/manager/mum.module.css";
+import DeleteUserRequests from "./DelReq";
 
 const API_HOST = "http://localhost:3000/api";
 
@@ -2466,6 +2471,10 @@ const ManagerUserManagement = () => {
           </div>
         </div>
       )}
+
+
+      <PendingUserApproval/>
+      <DeleteUserRequests/>
     </div>
   );
 };

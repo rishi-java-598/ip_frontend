@@ -257,6 +257,7 @@
 //part 3:
 import React, { useMemo, useState } from 'react';
 import styles from './style.module.css';
+import styles2 from './ad.module.css';
 import { api } from './api';
 import { subMonths, format } from 'date-fns';
 
@@ -364,7 +365,7 @@ const AttendanceSummary = () => {
             <div>Total Registered Members: {summary.totalMembers}</div>
 
             <h4>Slot counts</h4>
-            <div className={styles.slotGrid}>
+            <div className={styles2.slotGrid}>
               {(summary.totalPresentPerSlot || []).map((c, idx) => (
                 <div key={idx} className={styles.slotCard}>
                   Slot {idx + 1}

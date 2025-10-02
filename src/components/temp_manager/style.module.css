@@ -382,6 +382,22 @@
 #dateInput{
   margin-left: 10px;
 }
+
+#searMem{
+
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 900px) {
   .calendar {
     display: none; /* hide large-screen calendar */
@@ -414,6 +430,12 @@
   .cols{
     display: flex;
     flex-direction: column;
+  }
+}
+@media (max-width:600px) {
+  .slotGrid
+  {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
