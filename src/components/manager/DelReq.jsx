@@ -94,8 +94,8 @@ const DeleteUserRequests = () => {
           <tbody>
             {requests.map((r) => (
               <tr key={r._id}>
-                <td>{r.targetUser?.name || "—"}</td>
-                <td>{r.targetUser?.email || "—"}</td>
+                <td>{r.name || "—"}</td>
+                <td>{r.email || "—"}</td>
                 <td>{r.action}</td>
                 <td>{r.status}</td>
                 <td>{new Date(r.createdAt).toLocaleString()}</td>
