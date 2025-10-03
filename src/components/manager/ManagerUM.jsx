@@ -2472,9 +2472,9 @@ const ManagerUserManagement = () => {
         </div>
       )}
 
-
+{/* 
       <PendingUserApproval/>
-      <DeleteUserRequests/>
+      <DeleteUserRequests/> */}
     </div>
   );
 };

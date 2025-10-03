@@ -1,40 +1,90 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route, useRoutes } from "react-router-dom";
+import { AuthProvider, useAuth } from "./components/context/Authcontext";
 
-// Pages
 import Home from "./components/generic/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ProtectedRoute from "./components/Protectedroute";
-import Dashboard from "./components/pages/Dashboard";
-import { AuthProvider } from "./components/context/Authcontext";
-import Navbar from "./components/generic/HamMenu";
 
+// Manager Pages
+import DeleteUserRequests from "./components/manager/DelReq";
+import ManagerUserManagement from "./components/manager/ManagerUM";
+import PendingUserApproval from "./components/manager/pendingReqs";
+import ManagerDashboard2 from "./components/temp_manager/MD";
+
+// TODO: Admin / Member imports
+// import AdminDashboard from "./components/admin/AdminDashboard";
+// import MemberDashboard from "./components/member/MemberDashboard";
 
 export default function App() {
+  const user = JSON.parse(localStorage.getItem("user"));
   return (
     <AuthProvider>
-    <Router>
-      <Routes>
-        {/* Public routes */}
-        <Route path="/" element={<><Home /></>} />
-        {/* <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        
-        {/* Protected dashboard route */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} /> 
-          <Route
-            path="/dashboard"
-            element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            }
-          />
-      </Routes>
-    </Router>
+      <Router>
+        <Routes>
+          {/* Public Routes */}
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+
+          {/* ------------------ Manager Routes ------------------ */}
+          {user?.role === "manager" && (
+            <>
+              <Route
+                path="/dashboard/am"
+                element={
+                  <ProtectedRoute>
+                    <ManagerDashboard2 />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/dashboard/um"
+                element={
+                  <ProtectedRoute>
+                    <ManagerUserManagement />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/dashboard/pua"
+                element={
+                  <ProtectedRoute>
+                    <PendingUserApproval />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/dashboard/udr"
+                element={
+                  <ProtectedRoute>
+                    <DeleteUserRequests />
+                  </ProtectedRoute>
+                }
+              />
+            </>
+          )}
+
+          {/* ------------------ Admin Routes ------------------ */}
+          {user?.role === "admin" && (
+            <>
+              {/* Add admin dashboard routes here */}
+              <Route path="/dashboard/admin" element={<ProtectedRoute><div>Admin Dashboard</div></ProtectedRoute>} />
+            </>
+          )}
+
+          {/* ------------------ Member Routes ------------------ */}
+          {user?.role === "member" && (
+            <>
+              {/* Add member dashboard routes here */}
+              <Route path="/dashboard/member" element={<ProtectedRoute><div>Member Dashboard</div></ProtectedRoute>} />
+            </>
+          )}
+
+          {/* Fallback: redirect unknown paths */}
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </Router>
     </AuthProvider>
   );
 }

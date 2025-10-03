@@ -325,6 +325,16 @@ const PendingUserApproval = () => {
       <h2 className={styles.header}>Pending User Approvals</h2>
 
       {/* Search + Sort */}
+             <input
+          type="text"
+          placeholder="Search pending users..."
+          value={search}
+          id={styles.searchBar2}
+          onChange={(e) => {
+            setPage(1);
+            setSearch(e.target.value);
+          }}
+        />
       <div className={styles.controls}>
         <input
           type="text"
@@ -336,6 +346,7 @@ const PendingUserApproval = () => {
             setSearch(e.target.value);
           }}
         />
+ 
         <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
           <option value="createdAt">Created At</option>
           <option value="name">Name</option>
