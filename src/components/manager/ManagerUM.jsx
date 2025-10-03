@@ -2283,7 +2283,7 @@ const ManagerUserManagement = () => {
 
       {selectedUser && (
         <div className={styles.modal}>
-          <div className={styles.modalContent}>
+          {/* <div className={`${styles.modalContent} `}>
 
          
 
@@ -2292,6 +2292,7 @@ const ManagerUserManagement = () => {
                 <h3>User Details</h3>
                 <p><b>Name:</b> {selectedUser.name}</p>
                 <p><b>Email:</b> {selectedUser.email}</p>
+                <p><b>Gender:</b> {selectedUser.Gender}</p>
                 <p><b>Phone:</b> {selectedUser.phone}</p>
                 <p><b>Status:</b> {selectedUser.status}</p>
                 <p><b>Unique ID:</b> {selectedUser.uniqueIdCard}</p>
@@ -2299,6 +2300,8 @@ const ManagerUserManagement = () => {
                   <b>Membership:</b> {selectedUser.membership?.type || "-"} (
                   {selectedUser.membership?.status})
                 </p>
+ 
+
                 <p>
                   <b>Validity:</b>{" "}
                   {selectedUser.membership?.validity?.startDate || "-"} to{" "}
@@ -2306,7 +2309,49 @@ const ManagerUserManagement = () => {
                 </p>
                 <button className={styles.cancelButton} onClick={() => setSelectedUser(null)}>Close</button>
               </>
-            )}
+            )} */}
+            <div
+    className={`${styles.modalContent} ${
+      styles[selectedUser.membership?.type?.toLowerCase()]}
+        ${styles["ucard"]}
+      }`}
+    >
+    {modalMode === "view" && (
+      <>
+        <h3>User Details</h3>
+        <p><b>Name:</b> {selectedUser.name}</p>
+        <p><b>Email:</b> {selectedUser.email}</p>
+        <p>
+          <b>Gender:</b>{" "}
+          <span
+            className={`${styles.genderBadge} ${
+              selectedUser.Gender === "Male" ? styles.male : styles.female
+            }`}
+          >
+            {selectedUser.Gender}
+          </span>
+        </p>
+        <p><b>Phone:</b> {selectedUser.phone}</p>
+        <p><b>Status:</b> {selectedUser.status}</p>
+        <p><b>Unique ID:</b> {selectedUser.uniqueIdCard}</p>
+        <p>
+          <b>Membership:</b> {selectedUser.membership?.type || "-"} (
+          {selectedUser.membership?.status})
+        </p>
+        <p>
+          <b>Validity:</b>{" "}
+          {selectedUser.membership?.validity?.startDate || "-"} to{" "}
+          {selectedUser.membership?.validity?.endDate || "-"}
+        </p>
+        <button
+          className={styles.cancelButton}
+          onClick={() => setSelectedUser(null)}
+        >
+          Close
+        </button>
+      </>
+    )}
+  
 
             {modalMode === "edit" && (
               <>
