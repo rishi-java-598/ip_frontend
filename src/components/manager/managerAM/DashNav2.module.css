@@ -25,12 +25,13 @@
 }
 
 .navItem:hover {
-  background: #f3f4f6;
+  background: #3b3b3b;
+  color: white;
 }
 
 .active {
-  background: #2563eb;
+  background: #2a2b2d;
   color: white;
-  border-color: #2563eb;
-  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.4);
+  border-color: #5b5b5b;
+  box-shadow: 0 2px 6px rgba(5, 42, 122, 0.4);
 }

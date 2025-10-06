@@ -75,7 +75,7 @@ const PreviousAttendance = () => {
   
   return (
     <div className={styles.wrap}>
-      <h1>Previous Attendance</h1>
+      <h1 style={{marginBottom:"10px"}}>Previous Attendance</h1>
       {loading && <div>Loading...</div>}
       {!loading && records.length === 0 && <div>No records</div>}
       <div className={styles.list}>
