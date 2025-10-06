@@ -225,7 +225,7 @@
 // src/components/admin/PendingUserApproval.jsx
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import styles from "../../styles/manager/pua.module.css";
+import styles from "../../../styles/manager/pua.module.css";
 
 const API_HOST = "http://localhost:3000/api";
 

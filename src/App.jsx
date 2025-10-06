@@ -7,10 +7,10 @@ import Register from "./components/Register";
 import ProtectedRoute from "./components/Protectedroute";
 
 // Manager Pages
-import DeleteUserRequests from "./components/manager/DelReq";
-import ManagerUserManagement from "./components/manager/ManagerUM";
-import PendingUserApproval from "./components/manager/pendingReqs";
-import ManagerDashboard2 from "./components/temp_manager/MD";
+import DeleteUserRequests from "./components/manager/managerUM/DelReq";
+import ManagerUserManagement from "./components/manager/managerUM/ManagerUM";
+import PendingUserApproval from "./components/manager/managerUM/pendingReqs";
+import ManagerDashboard2 from "./components/manager/managerAM/MD";
 
 // TODO: Admin / Member imports
 // import AdminDashboard from "./components/admin/AdminDashboard";

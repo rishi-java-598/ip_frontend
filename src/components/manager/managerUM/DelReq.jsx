@@ -163,7 +163,7 @@ const DeleteUserRequests = () => {
 
   return (
     <div className={styles.container}>
-      <h2>Delete User Requests</h2>
+      <h2 style={{marginBottom:"10px"}}>Delete User Requests</h2>
 
       {/* 🔎 Controls */}
       <div className={styles.controls}>
