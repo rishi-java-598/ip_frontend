@@ -163,6 +163,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './style.module.css';
 import { api } from './api';
 import UserAttendanceDetail from './UAdetails'; // ✅ import modal
+import { GrView } from "react-icons/gr";
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
@@ -235,7 +236,7 @@ const UserList = () => {
                     setSelectedUser(u._id);
                   }}
                 >
-                  View
+                  <GrView />
                 </button>
               </div>
             </div>

@@ -263,11 +263,12 @@
 }
 
 .viewUABTN{
-  padding: 10px;
-  border-radius: 10px;
-  border: blue 1px dashed;
-  align-self: center;
-  justify-self: center;
+    padding: 4px 10px;
+    color: white;
+    border-radius: 10px;
+    border: #000000 1px solid;
+    align-self: center;
+    background-color: #000000;
 }
 
 .uppernav{
