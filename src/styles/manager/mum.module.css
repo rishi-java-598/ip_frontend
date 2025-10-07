@@ -5,8 +5,8 @@
 }
 
 .mumheader {
-  text-align: center;
-  margin-bottom: 20px;
+  /* text-align: center; */
+  margin-bottom: 10px;
   color: #333;
 }
 
@@ -46,11 +46,13 @@
   transition: transform 0.2s;
 }
 .addBtn{
-    padding: 8px 10px;
+    padding: 4px;
     border: 1px solid #ddd;
     border-radius: 8px;
+    width: 100px;
     outline: none;
-    background: #88ff90d6;
+    color:white;
+    background: #389538d6;
   }
 .userCard:hover {
   transform: translateY(-4px);
@@ -116,6 +118,15 @@
   text-align: center;
   color: #999;
   grid-column: 1 / -1;
+
+
+  
+   min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+  color: #888;
 }
 
 .pagination {
@@ -168,6 +179,15 @@
   margin-bottom: 20px;
   display: none;
 }
+#errormsg{
+  color: red;
+  text-align: center;
+  padding: 4px;
+  margin-bottom: 10px;
+  background: #f5f7ff;
+  border-radius: 12px;
+  border: 1px solid rgba(169, 169, 217, 0.216);
+}
 
 
 .modalControls{
@@ -205,4 +225,141 @@
     width: 100%;
   }
   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------*/
+
+.modalContent {
+  position: relative;
+  padding: 2rem;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  max-width: 500px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 0.4s ease;
+}
+
+.modalContent h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+.modalContent p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.modalContent b {
+  color: #000000;
+  /* font-style: ; */
+}
+
+/* ✨ Membership Types */
+.gold {
+  /* background: linear-gradient(145deg, #f9e79f, #f1c40f); */
+  box-shadow: 0 0 20px rgba(241, 196, 15, 0.6);
+  background-image: url("../../assets/gold3.png");
+  color: #3a2f00;
+}
+
+.silver {
+  /* background: linear-gradient(145deg, #ecf0f1, #bdc3c7); */
+  box-shadow: 0 0 20px rgba(189, 195, 199, 0.6);
+  color: #2c3e50;
+    background-image: url("../../assets/silver.png");
+      background-size: cover;
+
+
+
+}
+
+.platinum {
+  /* background: linear-gradient(145deg, #b7c6f9, #f3b6f2); */
+  /* background: linear-gradient(145deg, #e5e4e2, #b8b8b8); */
+  box-shadow: 0 0 25px rgba(192, 192, 192, 0.8);
+  background-image: url("../../assets/plat.png");
+  background-size: cover;
+  /* background-position: center; */
+  color: #ffffff;
+}
+
+/* 🪪 Gender Badge */
+.genderBadge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+}
+
+.male {
+  background: linear-gradient(135deg, #6fb2fff1, #5ea1e9df);
+}
+
+.female {
+  background: linear-gradient(135deg, #ff8eb3, #e899a8);
+}
+
+/* ❌ Close Button */
+.cancelButton {
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancelButton:hover {
+  background: #555;
+  transform: scale(1.05);
+}
+
+/* Subtle appear animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: make it responsive */
+@media (max-width: 500px) {
+  .modalContent {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .modalContent h3 {
+    font-size: 1.3rem;
+  }
 }

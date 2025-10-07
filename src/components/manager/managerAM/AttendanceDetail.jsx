@@ -377,7 +377,9 @@ const AttendanceDetail = ({ record, onClose }) => {
           </div>
 
           {/* Pagination Controls */}
-          {totalPages > 1 && (
+          {
+          // totalPages > 1 && 
+          (
             <div className={styles2.pagination}>
               <button
                 disabled={page === 1}

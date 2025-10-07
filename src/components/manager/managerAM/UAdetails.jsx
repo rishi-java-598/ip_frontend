@@ -117,6 +117,9 @@ const UserAttendanceDetail = ({ userId, onClose }) => {
     setLoading(false);
   };
 
+
+  
+
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modal}>
@@ -160,15 +163,15 @@ const UserAttendanceDetail = ({ userId, onClose }) => {
           <div>
             <label>Limit:</label>
             <select value={limit} onChange={e => setLimit(e.target.value)}>
-              {[10, 20, 50].map(n => <option key={n} value={n}>{n}</option>)}
+              {[5,10, 20, 50].map(n => <option key={n} value={n}>{n}</option>)}
             </select>
           </div>
         </div>
 
         {/* Records */}
         <div className={styles.records}>
-          {loading && <div>Loading...</div>}
-          {!loading && records.length === 0 && <div>No records found</div>}
+          {loading && <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>Loading...</div>}
+          {!loading && records.length === 0 && <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>No records found</div>}
 
           {!loading && records.map((r, idx) => (
             <div key={idx} className={styles.recordCard}>
@@ -182,7 +185,7 @@ const UserAttendanceDetail = ({ userId, onClose }) => {
         {/* Pagination */}
         <div className={styles.pagination}>
           <button disabled={page <= 1} onClick={() => setPage(p => p - 1)}>Prev</button>
-          <span>Page {page} / {totalPages} (Total {totalRecords})</span>
+          <span>Page {page} of {totalPages} (Total {totalRecords})</span>
           <button disabled={page >= totalPages} onClick={() => setPage(p => p + 1)}>Next</button>
         </div>
       </div>

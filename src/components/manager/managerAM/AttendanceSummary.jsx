@@ -375,7 +375,7 @@ const AttendanceSummary = () => {
               ))}
             </div>
 
-            <h4 style={{ marginBottom: '10px' }}>Slot details</h4>
+            <h4 style={{ margin: '10px 0px 10px 0px' }}>Slot details</h4>
             {Object.keys(summary.slotSummary || {}).map((s) => {
               const searchVal = slotSearch[s] || '';
               const page = slotPage[s] || 1;
@@ -433,7 +433,7 @@ const AttendanceSummary = () => {
                       Prev
                     </button>
                     <span>
-                      Page {page} / {totalPages}
+                      Page {page} of {totalPages}
                     </span>
                     <button
                       disabled={page >= totalPages}

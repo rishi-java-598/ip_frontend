@@ -1937,8 +1937,11 @@ const ManagerUserManagement = () => {
       </div>
 
       {/* Loader & Error */}
-      {loading && <p style={{ textAlign: "center" }}>Loading...</p>}
-      {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
+      {loading && <p 
+      // style={{ textAlign: "center" }}
+      className={styles.empty}>
+        Loading...</p>}
+      {error && <p id={styles.errormsg} style={{ color: "red", textAlign: "center",padding:"4px" }}>{error}</p>}
 
       {/* User Cards */}
       <div className={styles.userGrid}>

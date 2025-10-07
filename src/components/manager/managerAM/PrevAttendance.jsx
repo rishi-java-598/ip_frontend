@@ -45,6 +45,7 @@ import React, { useEffect, useState } from 'react';
 // export default PreviousAttendance;import React, { useEffect, useState } from "react";
 import styles from "./style.module.css";
 import { api } from "./api";
+import { FaArrowRight } from "react-icons/fa6";
 import AttendanceDetail from "./AttendanceDetail";
 
 const PreviousAttendance = () => {
@@ -76,7 +77,7 @@ const PreviousAttendance = () => {
   return (
     <div className={styles.wrap}>
       <h1 style={{marginBottom:"10px"}}>Previous Attendance</h1>
-      {loading && <div>Loading...</div>}
+      {loading && <div  style={{minHeight:"300px",display: "flex", justifyContent: "center", alignItems: "center"}}>Loading...</div>}
       {!loading && records.length === 0 && <div>No records</div>}
       <div className={styles.list}>
         {records.map((r, idx) => (
@@ -90,14 +91,15 @@ const PreviousAttendance = () => {
               <button
               
                 
-                style={{padding:"8px",fontSize:"10px",backgroundColor:"rgb(0 0 0 / 8%)",textDecoration:"none",color:"black"}}
+                // style={{padding:"8px",fontSize:"10px",backgroundColor:"rgb(0 0 0 / 8%)",textDecoration:"none",color:"black"}}
                 className={styles.viewUABTN}
                 onClick={(e) => {
                   e.preventDefault();
                   setSelectedRecord(r);
                 }}
               >
-                view
+                {/* view */}
+                <FaArrowRight/>
               </button>
             </div>
           </div>

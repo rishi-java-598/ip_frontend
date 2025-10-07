@@ -415,7 +415,7 @@ const MarkAttendance = () => {
   // pagination states
   const [markedPage, setMarkedPage] = useState(1);
   const [unmarkedPage, setUnmarkedPage] = useState(1);
-  const limit = 4;
+  const limit = 5;
 
   useEffect(() => {
     loadUsers();
@@ -605,7 +605,7 @@ const MarkAttendance = () => {
               Prev
             </button>
             <span>
-              Page {markedPage} / {markedTotalPages}
+              Page {markedPage} of {markedTotalPages}
             </span>
             <button
               disabled={markedPage >= markedTotalPages}
@@ -635,7 +635,7 @@ const MarkAttendance = () => {
             }}
           />
           <div className={styles.resultList}>
-            {loading && <div>Loading users...</div>}
+            {loading && <div style={{minHeight: "300px", display: "flex", justifyContent: "center", alignItems: "center"}}>Loading users...</div>}
             {!loading && paginatedUnmarked.length === 0 && (
               <div className={styles.empty}>No users found</div>
             )}
@@ -664,7 +664,7 @@ const MarkAttendance = () => {
               Prev
             </button>
             <span>
-              Page {unmarkedPage} / {unmarkedTotalPages}
+              Page {unmarkedPage} of {unmarkedTotalPages}
             </span>
             <button
               disabled={unmarkedPage >= unmarkedTotalPages}

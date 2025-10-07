@@ -163,8 +163,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './style.module.css';
 import { api } from './api';
 import UserAttendanceDetail from './UAdetails'; // ✅ import modal
-import { GrView } from "react-icons/gr";
-
+import { FaArrowRight } from "react-icons/fa6";
 const UserList = () => {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState('');
@@ -216,7 +215,7 @@ const UserList = () => {
       </div>
 
       <div className={styles.list}>
-        {loading && <div>Loading...</div>}
+        {loading && <div style={{minHeight: "300px", display: "flex", justifyContent: "center", alignItems: "center"}}>Loading...</div>}
 
         {!loading &&
           filtered.map(u => (
@@ -236,7 +235,7 @@ const UserList = () => {
                     setSelectedUser(u._id);
                   }}
                 >
-                  <GrView />
+                  <FaArrowRight />
                 </button>
               </div>
             </div>
