@@ -199,7 +199,12 @@ const DeleteUserRequests = () => {
 
       {/* 📋 Cards */}
       {loading ? (
-        <p>Loading...</p>
+        <p style={{ display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "30px",
+    minHeight: "300px",
+   }}>Loading...</p>
       ) : requests.length > 0 ? (
         <div className={styles.cardList}>
           {requests.map((r) => (
