@@ -412,7 +412,7 @@ const PendingUserApproval = () => {
           Prev
         </button>
         <span>
-          {page} / {totalPages}
+          {page} of {totalPages}
         </span>
         <button
           disabled={page === totalPages}

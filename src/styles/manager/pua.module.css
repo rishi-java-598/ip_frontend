@@ -7,7 +7,7 @@
 }
 
 .header {
-  text-align: center;
+  /* text-align: center; */
   font-size: 1.8rem;
   margin-bottom: 20px;
   color: #333;
@@ -36,10 +36,19 @@
 }
 
 .loading {
-  text-align: center;
+  /* text-align: center; */
   font-size: 1rem;
   margin-top: 20px;
   color: #666;
+   text-align: center;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    min-height: 300px;
+    color: #777;
+    font-size: 1rem;
 }
 
 .error {
@@ -130,10 +139,19 @@
 }
 
 .empty {
-  text-align: center;
+  /* text-align: center; */
   margin-top: 30px;
   color: #777;
   font-size: 1rem;
+  text-align: center;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    min-height: 300px;
+    color: #777;
+    font-size: 1rem;
 }
 
 .pagination {
@@ -145,18 +163,23 @@
 }
 
 .pagination button {
-  background: #007bff;
-  color: white;
+padding: 0.5rem 1rem;
   border: none;
-  padding: 8px 14px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
   border-radius: 8px;
   cursor: pointer;
-  font-size: 0.9rem;
+  transition: background 0.2s ease;
 }
 
 .pagination button:disabled {
-  background: #aaa;
+  background: #cbd5e1;
   cursor: not-allowed;
+  padding: 6px 12px;
+  color: #1010104D;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: #fff;
 }
 
 .pagination span {

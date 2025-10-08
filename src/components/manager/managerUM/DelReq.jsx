@@ -169,7 +169,8 @@ const DeleteUserRequests = () => {
       <div className={styles.controls}>
         <input
           type="text"
-          placeholder="Search by action/status"
+          title="Search by name/email/action/status"
+          placeholder="Search by name/email/action/status"
           value={search}
           onChange={(e) => {
             setSearch(e.target.value);
