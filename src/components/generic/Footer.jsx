@@ -88,9 +88,8 @@ Address - VIT BHOPAL
 
           <h3 style={{ color: "white",marginTop:"10px" }}>                  <br />
 mail : expo.tracey@gmail.com</h3>
-
           <h4
-
+          
             style={{
               display: "flex",
               alignItems: "center",

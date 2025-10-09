@@ -722,8 +722,8 @@ const ManagerUserManagement = () => {
       )}
 
 {/* 
-      <PendingUserApproval/>
-      <DeleteUserRequests/> */}
+  <PendingUserApproval/>
+  <DeleteUserRequests/> */}
     </div>
   );
 };

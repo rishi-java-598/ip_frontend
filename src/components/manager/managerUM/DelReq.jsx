@@ -120,7 +120,7 @@
 // };
 
 // export default DeleteUserRequests;
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./DeleteUserRequests.module.css";
 
 const DeleteUserRequests = () => {

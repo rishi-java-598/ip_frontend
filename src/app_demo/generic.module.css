@@ -45,7 +45,7 @@ nav>h1{
     line-height: 2rem;
     margin-left: -55vw;
     color: transparent;
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'Gilroy-Regular', sans-serif;
     background-image: url(/images/h1-bg.jpeg);
     background-size: cover;
     background-position: bottom;
@@ -113,7 +113,7 @@ button:active {
   background-size: cover;
 }
 #left-text>h2{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Gilroy-Regular', sans-serif;
   
   color: #272626dd;
 }
@@ -296,7 +296,7 @@ button:active {
   width: 350px;
   height: 400px;
   perspective: 1000px;
-  font-family: sans-serif;
+  font-family: 'Gilroy-Regular', sans-serif;
 }
 
 .title {
@@ -510,6 +510,6 @@ footer{
 footer h2{
   font-size: 1rem;
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Gilroy-Regular', sans-serif;
   font-weight: 500;
 }

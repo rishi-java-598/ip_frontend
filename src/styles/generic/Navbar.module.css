@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Gilroy-Regular', sans-serif;
 }
 
 .navbar-div {
@@ -180,6 +180,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .menu-toggle {
     display: flex;
   }

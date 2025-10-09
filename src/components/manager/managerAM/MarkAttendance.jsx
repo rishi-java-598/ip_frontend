@@ -384,7 +384,7 @@
 
 
 //part 3
-import React, { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import styles from './style.module.css';
 import { MdDelete } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";

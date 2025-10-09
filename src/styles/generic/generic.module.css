@@ -24,7 +24,7 @@ body {
   justify-self: center;
   align-self: center;
   margin: 10px 0px 30px 0px;
-  padding: 10px ;
+  padding: 0 10px ;
   border-radius: 80px;
   border: 1px solid #a1a0a052;
   background-image: url(../../assets/3433814.jpg);
@@ -43,12 +43,12 @@ body {
 .rnc{
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-right: 20px;
+    /* gap: 15px; */
+    /* margin-right: 20px; */
 }
 .nav img{
-    height:100px;
-    width: 100px;  
+    height:70px;
+    width: 70px;  
     border: 2px solid #656565af;
     border-radius: 50%;
 }
@@ -57,7 +57,7 @@ body {
     font-weight: 900;
     line-height: 2rem;
     color: transparent;
-    font-family: 'Gilroy', sans-serif;
+  font-family: 'Gilroy-Bold', sans-serif;
     background-image: url(../../assets/h1-bg.jpeg);
     background-size: cover;
     background-position: bottom;
@@ -173,22 +173,11 @@ body {
   object-fit: cover;
 }
 
-
-
 .statBox {
   flex: 1;
   min-width: 220px;
   text-align: center;
 }
-
-
-
-
-
-
-
-
-
 
 .signupBtn {
   position: relative;
@@ -216,25 +205,6 @@ body {
 .signupBtn:active {
   transform: scale(0.9);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #moveLink{
   text-decoration: none;
@@ -588,6 +558,11 @@ gap:20px;
 
 
 @media (max-width: 768px) {
+    .rnc{
+  
+    gap: 15px; 
+     margin-right: 20px;
+}
   .upd,.lowd{
     flex-direction: column;
     text-align: center;

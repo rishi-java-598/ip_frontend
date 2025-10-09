@@ -274,8 +274,12 @@
 // };
 
 // export default Login;
-import React, { useState } from "react";
+
+
+
 import styles from "../styles/generic/Login.module.css";
+import '../styles/generic/Register.module.css'
+import React, { useState } from "react";
 import { useAuth } from "../components/context/Authcontext";
 import { useNavigate, Link } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
