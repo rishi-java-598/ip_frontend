@@ -552,14 +552,7 @@ footer h2{
 
 
 @media (max-width: 992px) {
-  .nav {
-    /* flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px 20px;
-    width: 100%;
-    margin: 0 0 2vh 0;
-    border-radius: 30px; */
-  }
+
   .nav > img {
     height: 70px;
     width: 70px;
@@ -683,9 +676,7 @@ footer h2{
     line-height: 1.5rem;
     letter-spacing: -0.2px;
   }
-  #rightText {
-    /* display: none; */
-  }
+
   #textBox > p {
     font-size: 15px;
   }

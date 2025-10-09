@@ -286,9 +286,6 @@ cursor: pointer;
   background-color: #333333;
   transform: scale(1.05);
 }
-.uppernav{
-  /* display: none; */
-}
 
 
 /* for userlist pagination */
@@ -438,9 +435,7 @@ cursor: pointer;
   .sidebar{
     display: none;
   }
-  .uppernav{
-    /* display: block; */
-  }
+
 }
 @media (max-width:1000px) {
   .cols{
