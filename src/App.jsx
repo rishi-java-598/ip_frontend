@@ -95,6 +95,8 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./components/context/Authcontext";
 import ProtectedRoute from "./components/Protectedroute";
+import AdminDashboard from "./components/admin/AdminDashboard";
+import UserDashboard from "./components/user/UserDashboard";
 
 // 🧩 Lazy-loaded public pages
 const Home = lazy(() => import("./components/generic/Home"));
@@ -186,10 +188,11 @@ export default function App() {
                 path="/dashboard/admin"
                 element={
                   <ProtectedRoute>
-                    <div style={{ padding: "20px" }}>
+                    {/* <div style={{ padding: "20px" }}>
                       <h2>Admin Dashboard</h2>
                       <p>This is the admin control panel for managing the system.</p>
-                    </div>
+                    </div> */}
+                  <></>
                   </ProtectedRoute>
                 }
               />
