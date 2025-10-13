@@ -342,15 +342,26 @@ cursor: pointer;
 
 
 
+.sortButton{
+padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+    transition: border 0.3s;
+      /* margin-bottom: 10px; */
+      background: white;
+
+}
 
 
 
-
-
-
-
-
-
+.filters{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
 
 
 
@@ -448,6 +459,18 @@ cursor: pointer;
   {
     grid-template-columns: 1fr 1fr;
   }
+
+  /* #ed{
+    margin:0px;
+  }
+
+  #sd{
+    margin:0px;
+
+  }
+ */
+
+
 }
 
 @media (max-width:500px) {

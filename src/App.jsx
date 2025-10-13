@@ -95,7 +95,6 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./components/context/Authcontext";
 import ProtectedRoute from "./components/Protectedroute";
-import AdminDashboard from "./components/admin/AdminDashboard";
 import UserDashboard from "./components/user/UserDashboard";
 
 // 🧩 Lazy-loaded public pages
@@ -104,6 +103,24 @@ const Login = lazy(() => import("./components/Login"));
 const Register = lazy(() => import("./components/Register"));
 
 // 🧩 Lazy-loaded manager subpages
+
+
+// admin pages
+const AdminDashboard = lazy(() =>
+  import("./components/admin/admin_M_AM/AD")
+);
+const AdminUserManagement = lazy(()=>{
+  return import("./components/admin/admin_M_UM/AdminUM")
+})
+
+const AdminDeleteUserRequests = lazy(()=>
+  import("./components/admin/admin_M_UM/DelReq")
+)
+const AdminPendingUserApproval = lazy(()=>
+  import("./components/admin/admin_M_UM/pendingReqs")
+)
+
+// Manager Pages (lazy)
 const DeleteUserRequests = lazy(() =>
   import("./components/manager/managerUM/DelReq")
 );
@@ -184,18 +201,52 @@ export default function App() {
 
             {/* ---------- Admin Routes ---------- */}
             {user?.role === "admin" && (
-              <Route
-                path="/dashboard/admin"
-                element={
-                  <ProtectedRoute>
-                    {/* <div style={{ padding: "20px" }}>
-                      <h2>Admin Dashboard</h2>
-                      <p>This is the admin control panel for managing the system.</p>
-                    </div> */}
-                  <></>
-                  </ProtectedRoute>
-                }
-              />
+              // <Route
+              //   path="/dashboard/admin"
+              //   element={
+              //     <ProtectedRoute>
+              //       {/* <div style={{ padding: "20px" }}>
+              //         <h2>Admin Dashboard</h2>
+              //         <p>This is the admin control panel for managing the system.</p>
+              //       </div> */}
+              //     <></>
+              //     </ProtectedRoute>
+              //   }
+              // />
+              <>
+                <Route
+                  path="/dashboard/am"
+                  element={
+                    <ProtectedRoute>
+                      <AdminDashboard />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/dashboard/um"
+                  element={
+                    <ProtectedRoute>
+                      <AdminUserManagement/>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/dashboard/pua"
+                  element={
+                    <ProtectedRoute>
+                      <AdminPendingUserApproval />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/dashboard/udr"
+                  element={
+                    <ProtectedRoute>
+                      <AdminDeleteUserRequests />
+                    </ProtectedRoute>
+                  }
+                />
+              </>
             )}
 
             {/* ---------- Member Routes ---------- */}

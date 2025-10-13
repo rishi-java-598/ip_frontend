@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import styles from "./DeleteUserRequests.module.css";
 
-const DeleteUserRequests = () => {
+const AdminDeleteUserRequests = () => {
   const [requests, setRequests] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -27,6 +27,8 @@ const DeleteUserRequests = () => {
       );
 
       const data = await res.json();
+      console.log(data);
+      
       setRequests(data.data);
       setTotalPages(data.totalPages);
     } catch (err) {
@@ -114,4 +116,4 @@ const DeleteUserRequests = () => {
   );
 };
 
-export default DeleteUserRequests;
+export default AdminDeleteUserRequests;

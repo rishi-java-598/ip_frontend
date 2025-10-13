@@ -5,7 +5,7 @@ import styles from "../../../styles/manager/pua.module.css";
 
 const API_HOST = "http://localhost:3000/api";
 
-const PendingUserApproval = () => {
+const AdminPendingUserApproval = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -259,4 +259,4 @@ const PendingUserApproval = () => {
   );
 };
 
-export default PendingUserApproval;
+export default AdminPendingUserApproval;

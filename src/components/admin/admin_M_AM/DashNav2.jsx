@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./DashNav2.module.css";
 
 const DashNav2 = ({ active, setActive }) => {

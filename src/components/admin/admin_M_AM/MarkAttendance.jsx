@@ -1,8 +1,3 @@
-
-
-
-
-
 //part 3
 import { useEffect, useMemo, useState } from 'react';
 import styles from './style.module.css';

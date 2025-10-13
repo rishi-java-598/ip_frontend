@@ -704,7 +704,7 @@ const AdminUserManagement = () => {
 
             {modalMode === "delete" && (
               <>
-                <h3>Request deletion of {selectedUser.name}?</h3>
+                <h3>are you sure you want to delete the account of {selectedUser.name}?</h3>
                 <div>
                   <button
                     className={styles.deleteBtn}

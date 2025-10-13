@@ -1,8 +1,3 @@
-
-
-
-
-
 // code splitting added :
 import React, { useEffect, useState, lazy, Suspense } from "react";
 import styles from "./style.module.css";
