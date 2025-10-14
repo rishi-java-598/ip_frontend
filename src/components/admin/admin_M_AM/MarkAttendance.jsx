@@ -100,6 +100,8 @@ const MarkAttendance = () => {
     const newMember = {
       memberId: user._id,
       memberName: user.name,
+      // edited for email change
+      memberEmail: user.email || '',
       membershipType: user.membership?.type || '',
       uniqueIdCard: user.uniqueIdCard || '',
       slot,
@@ -135,9 +137,11 @@ const MarkAttendance = () => {
   const handleSave = async () => {
     const newMembers = markedToday.filter(m => !allUsers.some(u => u._id === m.memberId && m._id));
     if (newMembers.length === 0) return alert('No new members to save');
+console.log(newMembers);
 
     const members = newMembers.map(m => ({
       memberId: m.memberId,
+      memberEmail: m.memberEmail,
       memberName: m.memberName,
       membershipType: m.membershipType,
       uniqueIdCard: m.uniqueIdCard,
