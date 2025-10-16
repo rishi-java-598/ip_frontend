@@ -117,31 +117,57 @@ const AdminUserManagement = () => {
   };
 
   // ❌ Request delete
-  const handleDeleteRequest = async () => {
-    try {
-      setLoading(true);
-      setError("");
+  // const handleDeleteRequest = async () => {
+  //   try {
+  //     setLoading(true);
+  //     setError("");
 
-      await axios.post(
-        `${API_HOST}/manager/delete-member-request`,
-        { userId: selectedUser._id },
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
-      );
+  //     await axios.post(
+  //       `${API_HOST}/manager/delete-member-request`,
+  //       { userId: selectedUser._id },
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer ${localStorage.getItem("token")}`,
+  //         },
+  //       }
+  //     );
 
-      setModalMode(null);
-      setSelectedUser(null);
-      fetchUsers();
-    } catch (err) {
-      console.error(err);
-      setError(err.response?.data?.message || "Failed to request deletion.");
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     setModalMode(null);
+  //     setSelectedUser(null);
+  //     fetchUsers();
+  //   } catch (err) {
+  //     console.error(err);
+  //     setError(err.response?.data?.message || "Failed to request deletion.");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
+
+
+  const handleDeleteUser = async () => {
+  try {
+    setLoading(true);
+    setError("");
+
+    await axios.delete(`${API_HOST}/delete/user/${selectedUser._id}`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+
+    setModalMode(null);
+    setSelectedUser(null);
+    fetchUsers(); // Refresh the list
+  } catch (err) {
+    console.error(err);
+    setError(err.response?.data?.message || "Failed to delete user.");
+  } finally {
+    setLoading(false);
+  }
+};
+
+
 
 // added
 //  const handleAddUser = async () => {
@@ -310,7 +336,7 @@ const AdminUserManagement = () => {
                     setModalMode("delete");
                   }}
                 >
-                  Request Deletion
+                  Delete
                 </button>
               </div>
             </div>
@@ -708,10 +734,10 @@ const AdminUserManagement = () => {
                 <div>
                   <button
                     className={styles.deleteBtn}
-                    onClick={handleDeleteRequest}
+                    onClick={handleDeleteUser}
                     disabled={loading}
                   >
-                    {loading ? "Requesting..." : "Confirm"}
+                    {loading ? "deleting..." : "Confirm"}
                   </button>
                   <button className={styles.cancelButton} onClick={() => setSelectedUser(null)}>Cancel</button>
                 </div>
