@@ -102,7 +102,7 @@
 
 .pagination button {
   padding: 0.5rem 1rem;
-  border: none;
+  border: 1px solid #5b5b5c1f;
   background: #ffffff;
   color: rgb(0, 0, 0);
   border-radius: 8px;

@@ -11,7 +11,6 @@ const AdminDeleteUserRequests = () => {
   const [sortBy, setSortBy] = useState("createdAt");
   const [sortOrder, setSortOrder] = useState("desc");
   const [loading, setLoading] = useState(false);
-
   const fetchRequests = async () => {
     setLoading(true);
     try {
@@ -42,6 +41,49 @@ const AdminDeleteUserRequests = () => {
     fetchRequests();
   }, [page, search, status, sortBy, sortOrder]);
 
+  
+const handleApprove = async (requestId) => {
+  try {
+    const res = await fetch(`http://localhost:3000/api/admin/delete-member-request/${requestId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || "Failed to approve request");
+
+    alert("Request approved and user deleted.");
+    fetchRequests(); // Refetch updated list
+  } catch (err) {
+    console.error("Approve error:", err);
+    alert(`Error: ${err.message}`);
+  }
+};
+
+const handleReject = async (requestId) => {
+  try {
+    const res = await fetch(`http://localhost:3000/api/admin/reject-member-request/${requestId}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || "Failed to reject request");
+
+    alert("Request rejected.");
+    fetchRequests(); // Refetch updated list
+  } catch (err) {
+    console.error("Reject error:", err);
+    alert(`Error: ${err.message}`);
+  }
+};
+
   return (
     <div className={styles.container}>
       <h2 style={{marginBottom:"10px"}}>Delete User Requests</h2>
@@ -54,8 +96,8 @@ const AdminDeleteUserRequests = () => {
           placeholder="Search by name/email/action/status"
           value={search}
           onChange={(e) => {
-            setSearch(e.target.value);
-            setPage(1);
+          setSearch(e.target.value);
+          setPage(1);
           }}
         />
 
@@ -79,8 +121,8 @@ const AdminDeleteUserRequests = () => {
       </div>
 
       {/* 📋 Cards */}
-      {loading ? (
-        <p style={{ display: "flex",
+    {loading ? (
+    <p style={{ display: "flex",
     justifyContent: "center",
     alignItems: "center",
     marginTop: "30px",
@@ -99,6 +141,40 @@ const AdminDeleteUserRequests = () => {
               <p><strong>Email:</strong> {r.email || "—"}</p>
               <p><strong>Action:</strong> {r.action}</p>
               <p><strong>Created:</strong> {new Date(r.createdAt).toLocaleString()}</p>
+              {
+              
+                r.status==="pending" &&
+              
+              <div style={{display:"flex",gap:"10px",marginTop:"10px"}}>
+
+                <button 
+                onClick={() => handleApprove(r._id)}
+
+                style={{
+                  padding:"5px 10px",
+                  backgroundColor:"#4CAF50",
+                  color:"white",
+                  border:"none",
+                  borderRadius:"4px",
+                  cursor:"pointer"
+                }}>
+                  
+                  Approve</button>
+                <button
+                onClick={() => handleReject(r._id)}
+
+                style={{
+                  padding:"5px 10px",
+                  backgroundColor:"#9f1616ff",
+                  color:"white",
+                  border:"none",
+                  borderRadius:"4px",
+                  cursor:"pointer"
+                }}
+                
+                >Reject</button>
+              </div>
+}
             </div>
           ))}
         </div>
@@ -117,3 +193,9 @@ const AdminDeleteUserRequests = () => {
 };
 
 export default AdminDeleteUserRequests;
+
+
+
+
+
+

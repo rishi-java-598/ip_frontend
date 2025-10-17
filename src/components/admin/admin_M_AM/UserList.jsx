@@ -1,5 +1,5 @@
 // code splitting added :
-import React, { useEffect, useState, lazy, Suspense } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import styles from "./style.module.css";
 import { api } from "./api";
 import { FaArrowRight } from "react-icons/fa6";
