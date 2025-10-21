@@ -24,9 +24,11 @@ const UserList = () => {
   const load = async (pageNum = 1) => {
     setLoading(true);
     try {
-      const res = await api.getUsers(`?role=member&page=${pageNum}&limit=${limit}`);
+      const res = await api.getUsers(`?role=member&page=${pageNum}&limit=${limit}&status=registered`);
       const data = res.data || res;
       setUsers(data.users || []);
+      // console.log(data.users);
+      
       setTotalPages(data.totalPages || 1);
     } catch (err) {
       console.error(err);
@@ -39,6 +41,7 @@ const UserList = () => {
       u.name?.toLowerCase().includes(search.toLowerCase()) ||
       u.email?.toLowerCase().includes(search.toLowerCase())
   );
+// console.log(selectedUser);
 
   return (
     <div className={styles.wrap}>
@@ -130,6 +133,7 @@ const UserList = () => {
           <UserAttendanceDetail
             userId={selectedUser}
             onClose={() => setSelectedUser(null)}
+            // uname={{selectedUser.name}}
           />
         </Suspense>
       )}
