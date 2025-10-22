@@ -1,0 +1,146 @@
+.outerContainer {
+  padding: 15px;
+width: 90%;
+margin: 0px auto;
+background-color: #ffffff;
+}
+.profileContainer {
+  max-width: 800px;
+  margin: 20px 0;
+  /* width: 100%; */
+  padding: 60px;
+  border-radius: 8px;
+  background-color:#000000e3;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  font-family: Arial, sans-serif;
+  color: #fdfdfd;
+}
+
+.heading {
+  /* text-align: center; */
+  margin-bottom: 25px;
+  font-weight: 700;
+  /* color: #e9cf27; */
+   /* font-size: 80px; */
+     font-size: 1.8rem;
+
+  
+}
+
+.profileItem {
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+/* Membership Type Background Colors */
+
+
+/* Gender Badge */
+.genderBadge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: white;
+  display: inline-block;
+  min-width: 60px;
+  text-align: center;
+  user-select: none;
+}
+
+.male {
+  background-color: #3498db; /* Blue */
+}
+
+.female {
+  background-color: #e91e63; /* Pink */
+}
+
+/* Status and Loading/Error */
+.status {
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.error {
+  color: #e74c3c;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+/* Button example (if you want to add a close or action button) */
+.cancelButton {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.cancelButton:hover {
+  background-color: #c0392b;
+}
+
+
+
+
+.gold {
+  /* background: linear-gradient(145deg, #f9e79f, #f1c40f); */
+ 
+
+  color: #f0b400e2;
+}
+
+.silver {
+  /* background: linear-gradient(145deg, #ecf0f1, #bdc3c7); */
+  box-shadow: 0 0 20px rgba(189, 195, 199, 0.6);
+  color: #000000;
+    background-image: url("../../assets/silver.png");
+      background-size: cover;
+
+
+
+}
+
+.platinum {
+  /* background: linear-gradient(145deg, #b7c6f9, #f3b6f2); */
+  /* background: linear-gradient(145deg, #e5e4e2, #b8b8b8); */
+ 
+  color: #ffacfb;
+}
+
+.couter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ldc{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+
+/* .platinum {
+  color: #fff;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+} */

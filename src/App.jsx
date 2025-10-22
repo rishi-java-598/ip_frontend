@@ -95,7 +95,8 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./components/context/Authcontext";
 import ProtectedRoute from "./components/Protectedroute";
-import UserDashboard from "./components/user/UserDashboard";
+import MemberPI from "./components/member/MemberPI";
+// import UserDashboard from "./components/member/UserDashboard";
 
 // 🧩 Lazy-loaded public pages
 const Home = lazy(() => import("./components/generic/Home"));
@@ -250,19 +251,33 @@ export default function App() {
             )}
 
             {/* ---------- Member Routes ---------- */}
-            {user?.role === "member" && (
+            {user?.role === "member" && (<>
               <Route
                 path="/dashboard/member"
                 element={
                   <ProtectedRoute>
                     <div style={{ padding: "20px" }}>
                       <h2>Member Dashboard</h2>
-                      <p>Welcome to your member portal.</p>
+                        <p>Welcome to your member portal.</p>
+                        {/* <UserDashboard/> */}
                     </div>
                   </ProtectedRoute>
                 }
               />
+             <Route
+                  path="/dashboard/pi"
+                  element={
+                    <ProtectedRoute>
+                      <MemberPI />
+                    </ProtectedRoute>
+                  }
+                />
+              
+              </>
+
+              
             )}
+             
 
             {/* ---------- Fallback ---------- */}
             <Route path="*" element={<Home />} />

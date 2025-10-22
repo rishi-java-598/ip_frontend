@@ -173,7 +173,7 @@ const UserAttendanceDetail = ({ userId, onClose }) => {
       if (endDate) params.append("endDate", endDate);
 
       const res = await api.getMemberAttendance(userId, `?${params.toString()}`);
-      // console.log(res);
+      console.log(res);
 
       setUname(res.username || "");
 

@@ -1,0 +1,108 @@
+
+.container {
+  font-family: Arial, sans-serif;
+  user-select: none;
+  max-width: fit-content;
+  padding: 8px;
+}
+
+.monthLabels {
+  display: grid;
+  grid-template-columns: 40px repeat(auto-fit, 16px);
+  align-items: center;
+  margin-left: 40px;
+  margin-bottom: 6px;
+  height: 24px;
+}
+
+.corner {
+  width: 40px;
+  height: 24px;
+}
+
+.monthLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #444;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+
+.mainGrid {
+  display: flex;
+  flex-direction: row;
+}
+
+.daysColumn {
+  display: grid;
+  grid-template-rows: repeat(7, 16px);
+  row-gap: 4px;
+  margin-right: 4px;
+  width: 40px;
+  font-size: 12px;
+  color: #555;
+  user-select: none;
+}
+
+.dayLabel {
+  height: 16px;
+  line-height: 16px;
+  text-align: right;
+  padding-right: 6px;
+  font-weight: 500;
+}
+
+.grid {
+  display: grid;
+  grid-auto-rows: 16px;
+  row-gap: 4px;
+  column-gap: 4px;
+  background-color: transparent;
+  user-select: none;
+}
+
+.dayCell {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  cursor: default;
+  transition: background-color 0.2s ease;
+}
+
+.dayCell.empty {
+  background-color: #e3e8ef;
+}
+
+.dayCell.filled {
+  background-color: #2f8e2f;
+}
+
+.dayCell.filled:hover {
+  background-color: #4caf50;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
