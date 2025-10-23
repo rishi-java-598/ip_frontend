@@ -95,7 +95,6 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./components/context/Authcontext";
 import ProtectedRoute from "./components/Protectedroute";
-import MemberPI from "./components/member/MemberPI";
 // import UserDashboard from "./components/member/UserDashboard";
 
 // 🧩 Lazy-loaded public pages
@@ -107,6 +106,7 @@ const Register = lazy(() => import("./components/Register"));
 
 
 // admin pages
+
 const AdminDashboard = lazy(() =>
   import("./components/admin/admin_M_AM/AD")
 );
@@ -134,6 +134,9 @@ const ManagerUserManagement = lazy(() =>
 const PendingUserApproval = lazy(() =>
   import("./components/manager/managerUM/pendingReqs")
 );
+// member pages
+
+const MemberPI = lazy(() => import("./components/member/MemberPI"));
 
 export default function App() {
   const user = JSON.parse(localStorage.getItem("user"));
