@@ -179,10 +179,11 @@ body {
   font-size: 1.5em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
 
   .menu-toggle {
     display: flex;
+    margin-right: 20px;
   }
   .menu-toggle2 {
      display: flex
@@ -202,10 +203,19 @@ body {
     display: none;
   }
 }
+@media (max-width:768px){
+  .menu-toggle{
+        margin-right: 0px;
+
+  }
+}
 @media (max-width:576px) {
  .menu-toggle2 {
         margin-top: 27px;
         margin-right: 26px;
+  }
+  .menu-toggle{
+    margin-right: 0px;
   }
   
 }

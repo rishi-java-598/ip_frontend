@@ -1,6 +1,6 @@
 .aumcontainer {
   width: 90%;
-  margin: 20px auto;
+  margin: 110px auto;
   /* font-family: "Poppins", sans-serif; */
 }
 
@@ -149,6 +149,7 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 3;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -205,10 +206,30 @@
   background: #6c757d;
   color: #fff;
 }
+
+
+@media (max-width: 992px) {
+ .aumcontainer {
+  width: 90%;
+  margin: 120px auto;
+  /* font-family: "Poppins", sans-serif; */
+}
+  
+}
+
+
 @media (max-width: 660px) {
   .userCard {
     max-width: 100%;
   }
+  
+}
+@media (max-width: 578px) {
+  .aumcontainer {
+  width: 90%;
+  margin: 110px auto;
+  /* font-family: "Poppins", sans-serif; */
+}
   
 }
 @media (max-width: 500px) {

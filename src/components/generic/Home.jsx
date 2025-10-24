@@ -5,6 +5,7 @@ import Stats from "./Stats";
 import WhyChoose from "./WhyChoose";
 import Membership from "./Membership";
 import Footer from "./Footer";
+import Navs from "./Navs";
 // import Navbar from "./HamMenu";
 
 

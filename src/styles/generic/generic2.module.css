@@ -32,7 +32,7 @@ body {
   background-size: cover;
   position: fixed;
   top: 0;
-  z-index: 1001;
+  z-index: 2;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 .lnc{
@@ -185,7 +185,7 @@ body {
   margin: 15px;
   padding: 15px 30px;
   text-align: center;
-  font-size: 18px;
+  font-size: 1rem;
   letter-spacing: 1px;
   text-decoration: none;
   color: black;
@@ -480,6 +480,10 @@ gap:20px;
 
 
 @media (max-width: 992px) {
+  .nav{
+      padding: 10px 10px ;
+
+  }
 
   .flipCard {
   width: 100%;
@@ -612,7 +616,7 @@ gap:20px;
   } */
   #mainpage {
     flex-direction: column;
-    margin-top:60px;
+    margin-top:100px;
     gap: 10px;
     width: 98%;
     height: auto;
@@ -763,4 +767,158 @@ gap:20px;
   width: 85%;
   margin: 0 auto;
   line-height: 1.4;
+}
+
+/* -----------------------------------
+   CENTER NAVIGATION LINKS
+----------------------------------- */
+
+.centerNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #000;
+  /* font-weight: 600; */
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* .navLink::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #000;
+  transition: width 0.3s ease;
+} */
+
+.navLink:hover {
+  color: #ff914d;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.dropBtn {
+  background: transparent;
+  border: none;
+  color: #000;
+  /* font-weight: 600; */
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+
+
+
+
+   text-decoration: none;
+    color: #000000;
+    border: 1px solid rgba(0, 0, 0, 0.514);
+    padding: 10px 20px;
+    background-color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    border-radius: 25px;
+    font-size: 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.dropBtn:hover {
+  color: #ff914d;
+}
+
+.arrow {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdownContent {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  display: none;
+  flex-direction: column;
+  min-width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.3s ease;
+  z-index: 999;
+}
+
+.dropdown:hover .dropdownContent {
+  display: flex;
+}
+
+.dropdownContent a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #111;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.dropdownContent a:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Subtle fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+
+
+
+
+.navLink{
+    text-decoration: none;
+    color: #000000;
+    border: 1px solid rgba(0, 0, 0, 0.514);
+    padding: 10px 20px;
+    background-color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    border-radius: 25px;
+    font-size: 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 992px) {
+  .centerNav {
+
+    display: none;
+  }
 }
